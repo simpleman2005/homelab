@@ -1,15 +1,15 @@
 all:
   vars:
-    control_plane_endpoint: 192.168.1.100
+    control_plane_endpoint: 192.168.100.100
     load_balancer_ip_pool:
-      - 192.168.1.224/27
+      - 192.168.100.224/27
 metal:
   children:
     masters:
       hosts:
-        metal0: {ansible_host: 192.168.1.110, mac: '00:23:24:d1:f5:69', disk: sda, network_interface: eno1}
-        metal1: {ansible_host: 192.168.1.111, mac: '00:23:24:d1:f3:f0', disk: sda, network_interface: eno1}
-        metal2: {ansible_host: 192.168.1.112, mac: '00:23:24:e7:04:60', disk: sda, network_interface: eno1}
+        metal0: {ansible_host: 192.168.100.110, mac: 'BC:24:11:8C:05:1E', disk: sda, network_interface: eno1}
+        metal1: {ansible_host: 192.168.100.111, mac: 'BC:24:11:F9:FE:6C', disk: sda, network_interface: eno1}
+        metal2: {ansible_host: 192.168.100.112, mac: 'BC:24:11:3A:03:56', disk: sda, network_interface: eno1}
     workers:
       hosts:
-        metal3: {ansible_host: 192.168.1.113, mac: '00:23:24:d1:f4:d6', disk: sda, network_interface: eno1}
+        metal3: {ansible_host: 192.168.100.113, mac: 'BC:24:11:41:2A:B7', disk: sda, network_interface: eno1}
